@@ -30,7 +30,7 @@ class TCPChatClient:
             user_message = f'{self.nickname}: {input("")}'
             self.connection.send(bytes(user_message, "utf-8"))
             if (user_message == f"{self.nickname}: /q"):
-                os._exit(os.EX_OK)
+                os._exit(1)
     
     def __init__(self, ip: str, port: int):
         self.connection = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
