@@ -19,7 +19,7 @@ class TCPChatClient:
                 server_message = self.connection.recv(2048).decode("utf-8")
                 print(server_message)
             except:
-                print("An error has ocurred"u)
+                print("An error has ocurred")
                 self.connection.close()
                 break
 
